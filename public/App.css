@@ -1,0 +1,38 @@
+div {
+  outline: none;
+}
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: left ease-in-out 0.3s, padding ease-in-out 0.3s;
+}
+.app-content {
+  height: calc(100% - 90px - 53px);
+  transition: height 0.3s ease;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  overflow-y: scroll;
+}
+.app-topbar {
+  border-bottom: 1px solid #e0e0e0;
+  /*box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);*/
+}
+#player {
+  height: 90px !important;
+  background-color: #fff;
+  z-index: 2;
+  box-shadow: 0 0 8px rgba(0,0,0,.4);
+  display: flex;
+  position: relative;
+}
+@media print {
+  .app-topbar,
+  .app-footer {
+    display: none;
+  }
+}
